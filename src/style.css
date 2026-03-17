@@ -1,0 +1,166 @@
+:root {
+  --primary: #00ffcc;
+  --bg-color: #0b0c10;
+  --text-color: #c5c6c7;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  user-select: none;
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+  background-color: var(--bg-color);
+  font-family: 'Courier New', Courier, monospace;
+  overflow: hidden;
+}
+
+#game-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000;
+  overflow: hidden;
+}
+
+canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+#ui-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.overlay, #hud {
+  pointer-events: auto; 
+}
+
+#hud {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  right: 15px;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+#hud.hidden {
+  display: none;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.overlay.hidden {
+  display: none;
+}
+
+.menu-content {
+  background: rgba(10, 15, 20, 0.95);
+  padding: 40px;
+  border: 2px solid var(--primary);
+  border-radius: 10px;
+  text-align: center;
+  color: var(--text-color);
+  box-shadow: 0 0 20px rgba(0, 255, 204, 0.4);
+}
+
+h1 {
+  font-size: 4rem;
+  margin-bottom: 30px;
+  color: #fff;
+  text-shadow: 0 0 10px var(--primary);
+  letter-spacing: 2px;
+}
+
+h2 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: #fff;
+  text-shadow: 0 0 8px var(--primary);
+}
+
+.main-btn {
+  font-size: 1.8rem;
+  padding: 15px 40px;
+  background-color: var(--primary);
+  color: #000;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.2s, box-shadow 0.2s;
+  font-family: inherit;
+  font-weight: bold;
+}
+
+.main-btn:hover {
+  transform: scale(1.05);
+  background-color: #33ffdd;
+  box-shadow: 0 0 15px var(--primary);
+}
+
+.toggles {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  font-size: 1.2rem;
+}
+
+.toggles label {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+button {
+  cursor: pointer;
+}
+
+#pause-btn {
+  background: rgba(0, 255, 204, 0.2);
+  border: 1px solid var(--primary);
+  color: white;
+  padding: 8px 20px;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: background-color 0.2s;
+}
+
+#pause-btn:hover {
+  background: rgba(0, 255, 204, 0.4);
+}
+
+#score-display {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--primary);
+  text-shadow: 1px 1px 4px black;
+}
