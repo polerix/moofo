@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>moofo</title>
+    <link rel="stylesheet" href="/src/style.css">
+  </head>
+  <body>
+    <div id="game-container">
+      <canvas id="gameCanvas"></canvas>
+      
+      <div id="ui-layer">
+        <div id="hud" class="hidden">
+          <button id="pause-btn">Pause</button>
+          <div id="score-display">Cows: 0/5</div>
+        </div>
+        
+        <div id="start-menu" class="overlay">
+          <div class="menu-content">
+            <h1>moofo</h1>
+            <button id="play-btn" class="main-btn">START ABOUCTION</button>
+            <div class="toggles">
+              <label><input type="checkbox" id="sound-btn" checked> Sound</label>
+              <label><input type="checkbox" id="music-btn" checked> Music</label>
+            </div>
+            <p style="margin-top: 20px; font-size: 0.9em; color: #aaa;">Controls: WASD/Arrows to move, Space to Tractor Beam</p>
+          </div>
+        </div>
+
+        <div id="pause-menu" class="overlay hidden">
+          <div class="menu-content">
+            <h2>PAUSED</h2>
+            <button id="resume-btn" class="main-btn">RESUME</button>
+          </div>
+        </div>
+
+        <div id="level2-popup" class="overlay hidden">
+          <div class="menu-content">
+            <h2>LEVEL 2</h2>
+            <p>You have collected 5 cows!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
